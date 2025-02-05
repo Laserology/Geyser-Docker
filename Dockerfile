@@ -1,3 +1,5 @@
+FROM debian:latest
+
 ENV ServerIP=localhost
 ENV ServerPort=25565
 
@@ -7,8 +9,6 @@ LABEL description="A simple docker file to run a geyser server with automatic up
 
 EXPOSE 19132/udp
 EXPOSE 19133/udp
-
-FROM debian:latest
 
 # Perform updates
 RUN apt update
