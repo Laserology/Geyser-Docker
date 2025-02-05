@@ -4,14 +4,14 @@ This repository contains the Dockerfile and example docker compose scripts for r
 # Running
 ### Via run:
 ```
-docker run --network host -e ServerIP=YourServerIP ghcr.io/laserology/geyser-docker
+docker run --network host -e ServerIP=YourServerIP ghcr.io/laserology/geyser-docker:main
 ```
 ### Via compose:
 ```yml
 services:
 	Geyser-MC:
 		container_name: Geyser
-		image: Laserology/GeyserMC
+		image: ghcr.io/laserology/geyser-docker:main
 		restart: always
 		environment:
 			- ServerIP=YourServerIP
