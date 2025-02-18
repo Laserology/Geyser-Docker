@@ -21,4 +21,4 @@ RUN mkdir /Geyser
 RUN wget -O /Geyser/standalone https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone
 
 # Run geyser
-CMD java -jar /Geyser/standalone --remote.address=$ServerIP --remote.port=ServerPort
+CMD java -jar /Geyser/standalone --remote.address=$ServerIP --remote.port=$ServerPort
