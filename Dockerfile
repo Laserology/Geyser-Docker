@@ -1,7 +1,9 @@
 FROM debian:latest
 
-ENV ServerIP=localhost
-ENV ServerPort=25565
+ENV address=localhost
+ENV port=25565
+ENV auth=floodgate
+ENV key=key.pem
 
 LABEL "com.example.vendor"="Laserology"
 LABEL version="1.0"
@@ -21,4 +23,4 @@ RUN mkdir /Geyser
 RUN wget -O /Geyser/standalone https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone
 
 # Run geyser
-CMD java -jar /Geyser/standalone --remote.address=$ServerIP --remote.port=$ServerPort
+CMD java -jar /Geyser/standalone --remote.address=$address --remote.port=$port --bedrock.auth-type=$auth --remote.floodgate-key-file=$key
