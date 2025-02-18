@@ -18,5 +18,7 @@ services:
       - port=YourServerPort
       - auth=floodgate/online (optional, default online)
       - key=/path/to/floodgate/key.pem (Needed for floodgate. Generated when the server runs with the mod installed.)
+    volumes:
+      - ${PWD}/key.pem:/key.pem
     network_mode: host
 ```
