@@ -2,10 +2,10 @@ FROM debian:latest
 
 ENV address=localhost
 ENV port=25565
-ENV auth=floodgate
+ENV auth=online
 ENV key=key.pem
 
-LABEL "com.example.vendor"="Laserology"
+LABEL "net.laserology.software"="Laserology"
 LABEL version="1.0"
 LABEL description="A simple docker file to run a geyser server with automatic updates."
 
