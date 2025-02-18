@@ -23,4 +23,4 @@ RUN mkdir /Geyser
 RUN wget -O /Geyser/standalone https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone
 
 # Run geyser
-CMD java -jar /Geyser/standalone --remote.address=$address --remote.port=$port --remote.auth-type=$auth --remote.floodgate-key-file=$key
+CMD java -jar /Geyser/standalone --remote.address=$address --remote.port=$port --remote.auth-type=$auth --floodgate-key-file=$key
