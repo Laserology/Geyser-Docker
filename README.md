@@ -4,7 +4,7 @@ This repository contains the Dockerfile and example docker compose scripts for r
 ## Run With Normal Online Mode
 ### Using docker run
 ```bash
-docker run -it -d --network host --restart always --name GeyserMC -e address=YourServerIP ghcr.io/laserology/geyser-docker:main
+docker run -it -d --network host --restart always --name GeyserMC -e address=YourServerIP -e savelogin=Username OR Username1\ Username2 ghcr.io/laserology/geyser-docker:main
 ```
 
 #### Using Docker Compose:
@@ -17,6 +17,9 @@ services:
     environment:
       - address=YourServerIP
       - port=YourServerPort
+      - savelogin=Usename
+      OR
+      - savelogin=Username1\ Username2\ etc...
     networks-mode: host
 ```
 
@@ -26,7 +29,7 @@ For running GeyserMC with Floodgate authentication:
 
 #### Using docker run:
 ```bash
-docker run -it -d --network host --restart always --name geyser-mc -e auth=floodgate -e key=/key.pem -e address=localhost ghcr.ghcr.io/your-repo/eyser-docker:main
+docker run -it -d --network host --restart always --name geyser-mc -e auth=floodgate -e key=/key.pem -e address=localhost -e savelogin=Username OR Username1\ Username2 ghcr.ghcr.io/your-repo/eyser-docker:main
 ```
 
 #### Using Docker Compose:
@@ -39,6 +42,9 @@ services:
     environment:
       - address=YourServerIP
       - port=YourServerPort
+      - savelogin=Usename
+      OR
+      - savelogin=Username1\ Username2\ etc...
       - auth=floodgate
       - key=/key.pem
     volumes:
