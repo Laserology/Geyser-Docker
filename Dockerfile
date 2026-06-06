@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM alpine:latest
 
 ENV address=localhost
 ENV port=25565
@@ -13,11 +13,8 @@ LABEL description="A simple docker file to run a geyser server with automatic up
 EXPOSE 19132/udp
 EXPOSE 19133/udp
 
-# Perform updates
-RUN apt update
-
 # Install the application dependencies
-RUN apt install openjdk-17-jre wget -y
+RUN apk add openjdk17 wget
 
 # Copy in geyser
 RUN mkdir /Geyser
