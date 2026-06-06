@@ -1,5 +1,5 @@
 # Geyser-Docker
-This repository contains the Dockerfile and example docker compose scripts for running GeyserMC inside a docker container
+This repository contains the Dockerfile and example docker compose scripts for running GeyserMC inside a docker container. Now based on alpine for lower space usage and faster operation.
 
 ## Run With Normal Online Mode
 ### Using docker run
