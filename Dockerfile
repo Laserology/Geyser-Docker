@@ -14,7 +14,7 @@ EXPOSE 19132/udp
 EXPOSE 19133/udp
 
 # Install the application dependencies
-RUN apk add openjdk17 wget
+RUN apk add openjdk21 wget
 
 # Copy in geyser
 RUN mkdir /Geyser
